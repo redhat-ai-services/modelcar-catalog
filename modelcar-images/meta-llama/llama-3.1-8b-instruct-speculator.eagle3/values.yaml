@@ -1,0 +1,15 @@
+model:
+  mode: uri
+  uri: oci://quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct-speculator.eagle3
+  args:
+    - --max-model-len=2048
+    - '--speculative-config={"model": "/mnt/models/llama-3.1-8b-instruct-speculator.eagle3", "method": "eagle3", "num_speculative_tokens": 4, "draft_tensor_parallel_size": 1}'
+
+  env:
+    - name: HF_HUB_OFFLINE
+      value: "1"
+
+servingRuntime:
+  args:
+    - --port=8080
+    - --model=/mnt/models/llama-3.1-8b-instruct
