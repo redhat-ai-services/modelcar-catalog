@@ -11,17 +11,17 @@ This ModelCar build downloads the model locally then copies the files to a conta
 ### Downloading model files locally
 
 ```
-mkdir -p ./modelcar-images/gemma-7b/models
+mkdir -p ./modelcar-images/google/gemma-7b/models
 podman run --rm --platform linux/amd64 \
-    -v ./modelcar-images/gemma-7b/models:/models \
-    --env-file modelcar-images/gemma-7b/downloader.env \
+    -v ./modelcar-images/google/gemma-7b/models:/models \
+    --env-file modelcar-images/google/gemma-7b/downloader.env \
     quay.io/redhat-ai-services/huggingface-downloader:latest
 ```
 
 ### Building the ModelCar Image
 
 ```
-podman build modelcar-images/gemma-7b \
+podman build modelcar-images/google/gemma-7b \
     -t quay.io/redhat-ai-services/modelcar-catalog:gemma-7b  \
     --platform linux/amd64
 ```
@@ -34,7 +34,7 @@ This model can be deployed using vLLM on OpenShift AI using the following Helm C
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i gemma-7b redhat-ai-services/vllm-kserve \
-    --values modelcar-images/gemma-7b/values.yaml
+    --values modelcar-images/google/gemma-7b/values.yaml
 ```
 
 For more information on the above Helm Chart, you can find the source code for that chart here:

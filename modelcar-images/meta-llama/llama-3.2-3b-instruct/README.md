@@ -12,7 +12,7 @@ Once your token has been created, be sure to accept the terms and conditions for
 
 ```
 export HF_TOKEN="hf_..."
-podman build modelcar-images/llama-3.2-3b-instruct \
+podman build modelcar-images/meta-llama/llama-3.2-3b-instruct \
     -t quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-3b-instruct \
     --build-arg HF_TOKEN=$HF_TOKEN \
     --platform linux/amd64
@@ -28,7 +28,7 @@ This configuration includes some specific configurations to deploy it on an NVID
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i llama-32-3b-instruct redhat-ai-services/vllm-kserve \
-    --values modelcar-images/llama-3.2-3b-instruct/values.yaml
+    --values modelcar-images/meta-llama/llama-3.2-3b-instruct/values.yaml
 ```
 
 ## Known Issues

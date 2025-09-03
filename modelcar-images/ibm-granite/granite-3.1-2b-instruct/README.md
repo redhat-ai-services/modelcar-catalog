@@ -7,7 +7,7 @@ quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-2b-instruct
 ## Building Image
 
 ```
-podman build modelcar-images/granite-3.1-2b-instruct \
+podman build modelcar-images/ibm-granite/granite-3.1-2b-instruct \
     -t quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-2b-instruct \
     --platform linux/amd64
 ```
@@ -20,7 +20,7 @@ This model can be deployed using vLLM on OpenShift AI using the following Helm C
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i granite-31-2b-instruct redhat-ai-services/vllm-kserve \
-    --values modelcar-images/granite-3.1-2b-instruct/values.yaml
+    --values modelcar-images/ibm-granite/granite-3.1-2b-instruct/values.yaml
 ```
 
 For more information on the above Helm Chart, you can find the source code for that chart here:

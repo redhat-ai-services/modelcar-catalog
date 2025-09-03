@@ -9,7 +9,7 @@ https://neuralmagic.com/blog/introducing-compressed-granite-3-1-powerful-perform
 ## Building Image
 
 ```
-podman build modelcar-images/granite-3.1-8b-instruct-quantized.w8a8 \
+podman build modelcar-images/redhatai/granite-3.1-8b-instruct-quantized.w8a8 \
     -t quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-8b-instruct-quantized.w8a8  \
     --platform linux/amd64
 ```
@@ -22,7 +22,7 @@ This model can be deployed using vLLM on OpenShift AI using the following Helm C
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i granite-31-8b-instruct redhat-ai-services/vllm-kserve \
-    --values modelcar-images/granite-3.1-8b-instruct-quantized.w8a8/values.yaml
+    --values modelcar-images/redhatai/granite-3.1-8b-instruct-quantized.w8a8/values.yaml
 ```
 
 For more information on the above Helm Chart, you can find the source code for that chart here:

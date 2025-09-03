@@ -12,7 +12,7 @@ Once your token has been created, be sure to accept the terms and conditions for
 
 ```
 export HF_TOKEN="hf_..."
-podman build modelcar-images/llama-3.2-1b-instruct \
+podman build modelcar-images/meta-llama/llama-3.2-1b-instruct \
     -t quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-1b-instruct \
     --build-arg HF_TOKEN=$HF_TOKEN \
     --platform linux/amd64

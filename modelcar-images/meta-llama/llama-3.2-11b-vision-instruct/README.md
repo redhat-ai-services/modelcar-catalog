@@ -11,18 +11,18 @@ This ModelCar build downloads the model locally then copies the files to a conta
 ### Downloading model files locally
 
 ```
-mkdir -p ./modelcar-images/llama-3.2-11B-vision-instruct/models
+mkdir -p ./modelcar-images/meta-llama/llama-3.2-11b-vision-instruct/models
 podman run --rm --platform linux/amd64 \
-    -v ./modelcar-images/llama-3.2-11B-vision-instruct/models:/models \
-    --env-file modelcar-images/llama-3.2-11B-vision-instruct/downloader.env \
+    -v ./modelcar-images/meta-llama/llama-3.2-11b-vision-instruct/models:/models \
+    --env-file modelcar-images/meta-llama/llama-3.2-11b-vision-instruct/downloader.env \
     quay.io/redhat-ai-services/huggingface-downloader:latest
 ```
 
 ### Building the ModelCar Image
 
 ```
-podman build modelcar-images/llama-3.2-11B-vision-instruct \
-    -t quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-11B-vision-instruct  \
+podman build modelcar-images/meta-llama/llama-3.2-11b-vision-instruct \
+    -t quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-11b-vision-instruct  \
     --platform linux/amd64
 ```
 
@@ -34,7 +34,7 @@ This model can be deployed using vLLM on OpenShift AI using the following Helm C
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i llama-32-11B-vision-instruct redhat-ai-services/vllm-kserve \
-    --values modelcar-images/llama-3.2-11B-vision-instruct/values.yaml
+    --values modelcar-images/meta-llama/llama-3.2-11b-vision-instruct/values.yaml
 ```
 
 For more information on the above Helm Chart, you can find the source code for that chart here:

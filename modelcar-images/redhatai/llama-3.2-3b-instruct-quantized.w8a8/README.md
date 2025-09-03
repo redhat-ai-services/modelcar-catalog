@@ -11,7 +11,7 @@ This model requires a user-token to authenticate with HuggingFace before pulling
 Once your token has been created, be sure to accept the terms and conditions for this model on the model home page.
 
 ```
-podman build modelcar-images/llama-3.2-3b-instruct-quantized.w8a8 \
+podman build modelcar-images/redhatai/llama-3.2-3b-instruct-quantized.w8a8 \
     -t quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-3b-instruct-quantized.w8a8 \
     --platform linux/amd64
 ```
@@ -26,7 +26,7 @@ This configuration includes some specific configurations to deploy it on an NVID
 helm repo add redhat-ai-services https://redhat-ai-services.github.io/helm-charts/
 helm repo update redhat-ai-services
 helm upgrade -i llama-32-3b-instruct redhat-ai-services/vllm-kserve \
-    --values modelcar-images/llama-3.2-3b-instruct-quantized.w8a8/values.yaml
+    --values modelcar-images/redhatai/llama-3.2-3b-instruct-quantized.w8a8/values.yaml
 ```
 
 ## Known Issues
