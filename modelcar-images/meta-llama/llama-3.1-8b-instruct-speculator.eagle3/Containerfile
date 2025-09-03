@@ -1,0 +1,17 @@
+FROM quay.io/redhat-ai-services/huggingface-downloader:latest as base
+
+# The model repo to download
+ENV MODEL_REPO="RedHatAI/Llama-3.1-8B-Instruct-speculator.eagle3"
+
+# Download the necessary model files
+RUN python3 download_model.py --model-repo ${MODEL_REPO}
+
+# Final image containing only the essential model files
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
+
+# Copy only the necessary model files from the base image
+COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct /models /models/llama-3.1-8b-instruct
+COPY --from=base /models /models/llama-3.1-8b-instruct-speculator.eagle3
+
+# Set the user to 1001
+USER 1001
