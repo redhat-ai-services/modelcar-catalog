@@ -10,7 +10,7 @@ RUN python3 download_model.py --model-repo ${MODEL_REPO}
 FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
 
 # Copy only the necessary model files from the base image
-COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct models/*.json /models/
+COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct models/*.json /models/llama-3.1-8b-instruct
 COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct models/model-00001-of-00004.safetensors /models/llama-3.1-8b-instruct
 COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct models/model-00002-of-00004.safetensors /models/llama-3.1-8b-instruct
 COPY --from=quay.io/redhat-ai-services/modelcar-catalog:llama-3.1-8b-instruct models/model-00003-of-00004.safetensors /models/llama-3.1-8b-instruct
