@@ -37,7 +37,7 @@ if __name__ == "__main__":
         type=str,
     )
 
-    default_allow_patterns = ["*.safetensors", "*.json", "*.txt"]
+    default_allow_patterns = ["*.safetensors", "*.json", "*.txt", "*.sig", "*.jinja"]
     allow_patterns = os.environ.get("ALLOW_PATTERNS", default_allow_patterns)
 
     parser.add_argument(
