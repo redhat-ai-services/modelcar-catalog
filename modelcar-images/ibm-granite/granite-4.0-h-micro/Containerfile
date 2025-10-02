@@ -1,0 +1,17 @@
+# Base image for the modelcar Granite image
+FROM quay.io/redhat-ai-services/huggingface-downloader:latest as base
+
+# The model repo to download
+ENV MODEL_REPO="ibm-granite/granite-4.0-h-micro"
+
+# Download the necessary model files
+RUN python3 download_model.py --model-repo ${MODEL_REPO}
+
+# Final image containing only the essential model files
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
+
+# Copy only the necessary model files from the base image
+COPY --from=base /models /models
+
+# Set the user to 1001
+USER 1001
