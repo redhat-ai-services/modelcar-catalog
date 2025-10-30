@@ -1,3 +1,8 @@
 model:
   mode: uri
   uri: oci://quay.io/redhat-ai-services/modelcar-catalog:gpt-oss-20b
+  env:
+    # tiktoken files are needed in disconnected environments
+    # https://docs.vllm.ai/projects/recipes/en/latest/OpenAI/GPT-OSS.html#troubleshooting
+    - name: TIKTOKEN_ENCODINGS_BASE
+      value: '/mnt/models/tiktoken_encodings'
