@@ -2,7 +2,7 @@
 
 https://huggingface.co/Qwen/Qwen3-4B
 
-quay.io/redhat-ai-services/modelcar-catalog:qwen2.5-7b-instruct
+quay.io/redhat-ai-services/modelcar-catalog:qwen3-4b
 
 ## Building Image
 
