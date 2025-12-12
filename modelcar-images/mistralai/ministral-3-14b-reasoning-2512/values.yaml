@@ -1,0 +1,8 @@
+model:
+  mode: uri
+  uri: oci://quay.io/redhat-ai-services/modelcar-catalog:ministral-3-14b-reasoning-2512
+
+image:
+  image: registry.redhat.io/rhaiis-preview/vllm-cuda-rhel9
+  tag: mistral-3-series
+  runtimeVersionOverride:
