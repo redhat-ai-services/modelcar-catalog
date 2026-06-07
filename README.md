@@ -232,6 +232,12 @@ https://huggingface.co/ibm-granite/granite-guardian-3.3-8b
 
 quay.io/redhat-ai-services/modelcar-catalog:granite-guardian-3.3-8b
 
+### granite-guardian-4.1-8b
+
+https://huggingface.co/ibm-granite/granite-guardian-4.1-8b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-guardian-4.1-8b
+
 ### gemma-7b
 
 https://huggingface.co/google/gemma-7b
