@@ -8,7 +8,7 @@ ENV MODEL_REPO="ibm-granite/granite-guardian-hap-38m"
 RUN python3 download_model.py --model-repo ${MODEL_REPO}
 
 # Final image containing only the essential model files
-FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.8
 
 # Copy only the necessary model files from the base image
 COPY --from=base /models /models

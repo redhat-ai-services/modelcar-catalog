@@ -46,7 +46,7 @@ RUN python3 download_model.py --model-repo ${MODEL_REPO} \
     --allow-patterns "params.json" "consolidated.safetensors" "tokenizer.model.v3"
 
 # Final image containing only the essential model files
-FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.8
 
 COPY --from=base /models /models
 

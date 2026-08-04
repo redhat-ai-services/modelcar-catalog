@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/ubi-micro:9.6
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.8
 
 # Copy the model files in multiple layers to avoid large image issues
 COPY models/*.json /models/
