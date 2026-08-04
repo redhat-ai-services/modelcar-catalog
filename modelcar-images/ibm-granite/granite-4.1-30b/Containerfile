@@ -1,0 +1,21 @@
+FROM registry.access.redhat.com/ubi9/ubi-micro:9.8
+
+# Copy the model files in multiple layers to avoid large image issues
+COPY models/*.json /models/
+COPY models/*.txt /models/
+COPY models/*.jinja /models/
+COPY models/model-00001-of-00012.safetensors /models/
+COPY models/model-00002-of-00012.safetensors /models/
+COPY models/model-00003-of-00012.safetensors /models/
+COPY models/model-00004-of-00012.safetensors /models/
+COPY models/model-00005-of-00012.safetensors /models/
+COPY models/model-00006-of-00012.safetensors /models/
+COPY models/model-00007-of-00012.safetensors /models/
+COPY models/model-00008-of-00012.safetensors /models/
+COPY models/model-00009-of-00012.safetensors /models/
+COPY models/model-00010-of-00012.safetensors /models/
+COPY models/model-00011-of-00012.safetensors /models/
+COPY models/model-00012-of-00012.safetensors /models/
+
+# Set the user to 1001
+USER 1001

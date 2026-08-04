@@ -196,6 +196,24 @@ https://huggingface.co/ibm-granite/granite-4.0-h-micro
 
 quay.io/redhat-ai-services/modelcar-catalog:granite-4.0-h-micro
 
+### granite-4.1-3b
+
+https://huggingface.co/ibm-granite/granite-4.1-3b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.1-3b
+
+### granite-4.1-8b
+
+https://huggingface.co/ibm-granite/granite-4.1-8b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.1-8b
+
+### granite-4.1-30b
+
+https://huggingface.co/ibm-granite/granite-4.1-30b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.1-30b
+
 ### granite-embedding-english-r2
 
 https://huggingface.co/ibm-granite/granite-embedding-english-r2
@@ -213,6 +231,12 @@ quay.io/redhat-ai-services/modelcar-catalog:granite-guardian-3.2-5b
 https://huggingface.co/ibm-granite/granite-guardian-3.3-8b
 
 quay.io/redhat-ai-services/modelcar-catalog:granite-guardian-3.3-8b
+
+### granite-guardian-4.1-8b
+
+https://huggingface.co/ibm-granite/granite-guardian-4.1-8b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-guardian-4.1-8b
 
 ### gemma-7b
 
