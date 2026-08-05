@@ -128,6 +128,10 @@ build-and-push-all:
 		if [ -d "$$orgdir" ]; then
 			for folder in $$orgdir/* ; do
 				if [ -d "$$folder" ] && [ -f "$$folder/Containerfile" ]; then
+					if [ -f "$$folder/.depreciated" ]; then
+						echo "Skipping depreciated model: $$folder"
+						continue
+					fi
 					$(MAKE) build-and-push folder="$$folder"
 					$(MAKE) prune folder="$$folder"
 				fi
