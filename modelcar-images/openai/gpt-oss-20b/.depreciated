@@ -1,0 +1,5 @@
+This modelcar image has been depreciated.
+
+Please use the official Red Hat ModelCar Image instead.
+
+oci://registry.redhat.io/rhelai1/modelcar-gpt-oss-20b:1.5

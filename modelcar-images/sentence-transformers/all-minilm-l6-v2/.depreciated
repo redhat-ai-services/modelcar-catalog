@@ -1,0 +1,5 @@
+This modelcar image has been depreciated.
+
+Please use the official Red Hat ModelCar Image instead.
+
+oci://registry.redhat.io/rhai/modelcar-all-minilm-l6-v2

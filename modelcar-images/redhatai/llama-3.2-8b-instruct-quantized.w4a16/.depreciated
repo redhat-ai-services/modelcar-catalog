@@ -1,0 +1,5 @@
+This modelcar image has been depreciated.
+
+Please use the official Red Hat ModelCar Image instead.
+
+oci://registry.redhat.io/rhelai1/modelcar-llama-3-1-8b-instruct-quantized-w4a16:1.5
