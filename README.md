@@ -262,6 +262,12 @@ https://huggingface.co/Qwen/Qwen3-8B
 
 quay.io/redhat-ai-services/modelcar-catalog:qwen3-8b
 
+### qwen3.5-9b
+
+https://huggingface.co/Qwen/Qwen3.5-9B
+
+quay.io/redhat-ai-services/modelcar-catalog:qwen3.5-9b
+
 ### gemma-4-31b-it-nvfp4
 
 https://huggingface.co/RedHatAI/gemma-4-31B-it-NVFP4
