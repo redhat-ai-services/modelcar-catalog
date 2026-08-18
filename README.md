@@ -232,6 +232,12 @@ https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
 
 quay.io/redhat-ai-services/modelcar-catalog:mistral-7b-instruct-v0.3
 
+### muse-glimmer-30b
+
+https://huggingface.co/meta-models/Muse-Glimmer-30B
+
+quay.io/redhat-ai-services/modelcar-catalog:muse-glimmer-30b
+
 ### whisper-large-v3
 
 https://huggingface.co/openai/whisper-large-v3
@@ -267,6 +273,12 @@ quay.io/redhat-ai-services/modelcar-catalog:qwen3-8b
 https://huggingface.co/Qwen/Qwen3.5-9B
 
 quay.io/redhat-ai-services/modelcar-catalog:qwen3.5-9b
+
+### qwen3.8-27b
+
+https://huggingface.co/Qwen/Qwen3.8-27B
+
+quay.io/redhat-ai-services/modelcar-catalog:qwen3.8-27b
 
 ### gemma-4-31b-it-nvfp4
 
