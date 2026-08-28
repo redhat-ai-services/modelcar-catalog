@@ -172,6 +172,24 @@ https://huggingface.co/ibm-granite/granite-4.1-8b
 
 quay.io/redhat-ai-services/modelcar-catalog:granite-4.1-8b
 
+### granite-4.2-30b
+
+https://huggingface.co/ibm-granite/granite-4.2-30b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.2-30b
+
+### granite-4.2-3b
+
+https://huggingface.co/ibm-granite/granite-4.2-3b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.2-3b
+
+### granite-4.2-8b
+
+https://huggingface.co/ibm-granite/granite-4.2-8b
+
+quay.io/redhat-ai-services/modelcar-catalog:granite-4.2-8b
+
 ### granite-guardian-3.2-5b
 
 https://huggingface.co/ibm-granite/granite-guardian-3.2-5b
